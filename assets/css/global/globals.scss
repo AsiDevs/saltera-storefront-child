@@ -1,0 +1,556 @@
+@use "breakpoints" as *;
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Kumbh+Sans:wght@100..900&display=swap");
+
+@font-face {
+  font-family: "HelveticaNeue";
+  src: url("../../fonts/HelveticaNeueThin.otf") format("opentype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "HelveticaNeue";
+  src: url("../../fonts/HelveticaNeueThinItalic.otf") format("opentype");
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "HelveticaNeue";
+  src: url("../../fonts/HelveticaNeueLight.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "HelveticaNeue";
+  src: url("../../fonts/HelveticaNeueLightItalic.otf") format("opentype");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "HelveticaNeue";
+  src: url("../../fonts/HelveticaNeueRoman.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "HelveticaNeue";
+  src: url("../../fonts/HelveticaNeueItalic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "HelveticaNeue";
+  src: url("../../fonts/HelveticaNeueMedium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "HelveticaNeue";
+  src: url("../../fonts/HelveticaNeueMediumItalic.otf") format("opentype");
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "HelveticaNeue";
+  src: url("../../fonts/HelveticaNeueBold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "HelveticaNeue";
+  src: url("../../fonts/HelveticaNeueBoldItalic.otf") format("opentype");
+  font-weight: 700;
+  font-style: italic;
+}
+
+:root {
+  --font-heading: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-sans: "Kumbh Sans", sans-serif;
+}
+
+[class*="text-title-"] {
+  em &,
+  i & {
+    font-family: "Instrument Serif", serif;
+    font-style: italic;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-body-color);
+  background-color: var(--color-primary-offwhite);
+}
+
+.text-title-3x-large {
+  font-size: 48px;
+  line-height: 52px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  font-family: var(--font-heading);
+  color: var(--color-title-color);
+
+  @include respond-to(md) {
+    font-size: 80px;
+    line-height: 80px;
+  }
+}
+
+.text-title-2x-large {
+  font-size: 40px;
+  line-height: 44px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  font-family: var(--font-heading);
+  color: var(--color-title-color);
+
+  @include respond-to(md) {
+    font-size: 62px;
+    line-height: 80px;
+  }
+}
+
+.text-title-x-large {
+  font-size: 32px;
+  line-height: 48px;
+  font-weight: 500;
+  font-family: var(--font-heading);
+  color: var(--color-title-color);
+
+  @include respond-to(md) {
+    font-size: 48px;
+    line-height: 62px;
+  }
+}
+
+.text-title-large {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 500;
+  font-family: var(--font-heading);
+  color: var(--color-title-color);
+
+  @include respond-to(md) {
+    font-size: 36px;
+    line-height: 40px;
+  }
+}
+
+.text-title-medium {
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 500;
+  font-family: var(--font-heading);
+  color: var(--color-title-color);
+
+  @include respond-to(md) {
+    font-size: 32px;
+    line-height: 40px;
+  }
+}
+
+.text-title-base {
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  font-family: var(--font-heading);
+
+  @include respond-to(md) {
+    font-size: 24px;
+    line-height: 28px;
+  }
+}
+
+.text-title-base-blog {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  font-family: var(--font-heading);
+
+  @include respond-to(md) {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+
+.text-title-small {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  font-family: var(--font-heading);
+}
+
+.text-body-large {
+  font-size: 20px;
+  line-height: 30px;
+
+  @include respond-to(md) {
+    font-size: 24px;
+    line-height: 40px;
+  }
+}
+
+.text-body-medium {
+  font-size: 18px;
+  line-height: 28px;
+
+  @include respond-to(md) {
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  &.medium {
+    font-weight: 500;
+  }
+
+  &.semibold {
+    font-weight: 600;
+  }
+}
+
+.text-body-base {
+  font-size: 16px;
+  line-height: 24px;
+
+  @include respond-to(md) {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  &.medium {
+    font-weight: 500;
+  }
+
+  &.semibold {
+    font-weight: 600;
+  }
+}
+
+.text-body-small {
+  font-size: 16px;
+  line-height: 24px;
+
+  &.medium {
+    font-weight: 500;
+  }
+}
+
+.text-body-small-sz {
+  font-size: 14px;
+  line-height: 22px;
+
+  &.medium {
+    font-weight: 500;
+  }
+}
+
+.text-body-caption {
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.common-space {
+  margin-bottom: 1.75rem;
+
+  @include respond-to(md) {
+    margin-bottom: 2rem;
+  }
+
+  @include respond-to(lg) {
+    margin-bottom: 2.5rem;
+  }
+}
+
+.common-space-top {
+  margin-top: 1.75rem;
+
+  @include respond-to(md) {
+    margin-top: 2rem;
+  }
+
+  @include respond-to(lg) {
+    margin-top: 2.5rem;
+  }
+}
+
+.common-gap {
+  gap: 1.75rem;
+
+  @include respond-to(md) {
+    gap: 2rem;
+  }
+
+  @include respond-to(lg) {
+    gap: 2.5rem;
+  }
+}
+
+/* Button */
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 380px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding: 1rem 1.5rem;
+  border-radius: 0.75rem;
+  transition: all 300ms linear;
+  font-weight: 500;
+  white-space: nowrap;
+
+  @include respond-to(sm) {
+    max-width: 290px;
+  }
+
+  @include respond-to(md) {
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+  }
+}
+
+.btn-primary {
+  color: var(--color-text-light);
+  background-color: var(--color-primary-dark);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-light);
+}
+
+.btn-primary:active {
+  background-color: var(--color-primary-dark);
+}
+
+.btn-secondary {
+  color: var(--color-primary-dark);
+  background-color: var(--color-text-light);
+  border: 1px solid var(--color-primary-dark);
+}
+
+.btn-secondary:hover {
+  color: var(--color-primary-dark);
+  background-color: var(--color-primary-offwhite-1);
+  border-color: var(--color-primary-dark);
+}
+
+.btn-secondary:active {
+  color: var(--color-primary-light);
+  background-color: var(--color-text-light);
+  border-color: var(--color-primary-dark);
+}
+
+.btn-link {
+  color: var(--color-primary-dark);
+  padding: 0px;
+}
+
+.btn-link:hover {
+  text-decoration: underline;
+}
+
+.btn-link:active {
+  text-decoration: underline;
+}
+
+.main-nav-item {
+  & > a {
+    & > button {
+      @media (min-width: 1200px) {
+        margin-left: 10px !important;
+      }
+    }
+  }
+}
+
+.main-nav-dropdown-links-wrapper {
+  overflow: hidden;
+  width: 100%;
+  padding-left: 10px;
+  border-radius: 10px;
+
+  li {
+    overflow: hidden;
+
+    &:first-child {
+      margin-top: 8px;
+    }
+
+    a {
+      white-space: nowrap;
+      max-width: 100%;
+      display: block;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      padding: 9px 16px;
+      transition: all 0.2s linear;
+
+      &:hover {
+        background: var(--color-secondary-light);
+      }
+    }
+  }
+
+  @media (min-width: 1200px) {
+    position: absolute;
+    background: var(--color-primary-white);
+    top: 99%;
+    left: -25px;
+    width: 250px;
+    padding: 0;
+    box-shadow:
+      0 20px 25px -5px rgb(0 0 0 / 0.1),
+      0 8px 10px -6px rgb(0 0 0 / 0.1);
+
+    li {
+      margin: 0 !important;
+    }
+  }
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.hide-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.testimonial-v2-embla {
+  .embla__container {
+    display: flex;
+    justify-content: flex-start;
+    .embla__slide {
+      flex: 0 0 80vw;
+      margin: 0 20px;
+    }
+    @media (min-width: 768px) {
+      .embla__slide {
+        flex: 0 0 50%;
+        margin-left: 0;
+        margin-right: 20px;
+      }
+    }
+    @media (min-width: 1200px) {
+      .embla__slide {
+        flex: 0 0 25%;
+      }
+    }
+  }
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+::details-content {
+  content-visibility: visible;
+}
+
+*:focus-visible {
+  outline: 2px solid dodgerblue;
+  outline-offset: -2px;
+  transition: none;
+}
+
+.common-duration {
+  transition-duration: 300ms;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+input[type="number"]::-ms-clear,
+input[type="number"]::-ms-expand {
+  display: none;
+}
+
+/* Footer Styles */
+.footer-nav-link {
+  display: inline-flex;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 1px;
+    width: 0%;
+    height: 1.8px;
+    background-color: var(--color-primary-dark);
+    transition:
+      width 0.3s ease,
+      color 0.3s ease;
+  }
+
+  &.is-active {
+    &::after {
+      width: 100%;
+    }
+  }
+
+  &:hover {
+    &::after {
+      width: 100%;
+    }
+  }
+}
+
+/* Custom Styles */
+.image-with-text-content .description p:not(:last-child) {
+  margin-bottom: 8px !important;
+}
+
+.with-list-points-content {
+  p:not(:last-child) {
+    margin-bottom: 10px !important;
+  }
+
+  ul {
+    background: var(--color-primary-offwhite);
+    border-left: 6px solid var(--color-text-description);
+    padding: 16px 20px 16px 14px;
+
+    li {
+      padding-left: 0px;
+      list-style: none;
+      &:first-child {
+        margin-bottom: 8px !important;
+      }
+    }
+  }
+}

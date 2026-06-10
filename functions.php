@@ -9,5 +9,12 @@ function my_child_theme_enqueue_styles() {
         array($parent_style), 
         wp_get_theme()->get('Version')
     );
+
+    wp_enqueue_style(
+        'child-globals',
+        get_stylesheet_directory_uri() . '/assets/css/global/globals.css',
+        array('child-style'),
+        wp_get_theme()->get('Version')
+    );
 }
 add_action('wp_enqueue_scripts', 'my_child_theme_enqueue_styles');

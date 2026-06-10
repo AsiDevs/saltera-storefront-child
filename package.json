@@ -1,0 +1,11 @@
+{
+  "name": "saltera-storefront-child",
+  "private": true,
+  "scripts": {
+    "build:css": "sass assets/css/global/globals.scss assets/css/global/globals.css",
+    "watch:css": "sass --watch assets/css/global/globals.scss assets/css/global/globals.css"
+  },
+  "devDependencies": {
+    "sass": "^1.89.2"
+  }
+}
