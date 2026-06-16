@@ -15,6 +15,16 @@
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
+<!-- Globals -->
+<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/css/global/globals.css">
+<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/css/global/common.css">
+
+<!-- Common -->
+<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/css/common/hero/hero.css">
+<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/css/common/faq/faq.css">
+<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/css/common/features/features.css">
+<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/css/common/image-with-text/image-with-text.css">
+
 <?php wp_head(); ?>
 </head>
 
@@ -61,7 +71,7 @@
 	?>
 
 	<div id="content" class="site-content" tabindex="-1">
-		<div class="col-full">
+		<div class="">
 
 		<?php
 		do_action( 'storefront_content_top' );

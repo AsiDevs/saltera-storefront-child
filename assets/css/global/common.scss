@@ -1,0 +1,42 @@
+@use "breakpoints" as *;
+
+.section-container {
+  padding: 0 16px;
+  max-width: 1440px;
+  margin: 0 auto;
+  @media (min-width: $md) {
+    padding: 0 40px;
+  }
+  @media (min-width: $xl) {
+    padding: 0 80px;
+  }
+  &.full-padding {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    @media (min-width: $md) {
+      padding-top: 80px;
+      padding-bottom: 80px;
+    }
+    @media (min-width: $xl) {
+      padding-top: 120px;
+      padding-bottom: 120px;
+    }
+  }
+}
+
+.max-w-880 {
+  max-width: 880px;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.bg-offwhite {
+  background-color: #f8f8f8;
+}

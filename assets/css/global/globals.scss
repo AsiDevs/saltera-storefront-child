@@ -1,4 +1,5 @@
 @use "breakpoints" as *;
+@import "colors";
 @import url("https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Kumbh+Sans:wght@100..900&display=swap");
 
 @font-face {
@@ -71,14 +72,35 @@
   font-style: italic;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+  line-height: inherit;
+  color: #0d0d0d;
+  font-weight: 500;
+}
+
 :root {
-  --font-heading: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-heading:
+    "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   --font-sans: "Kumbh Sans", sans-serif;
 }
 
 [class*="text-title-"] {
-  em &,
-  i & {
+  em,
+  i {
     font-family: "Instrument Serif", serif;
     font-style: italic;
   }
@@ -102,7 +124,7 @@ body {
   font-family: var(--font-heading);
   color: var(--color-title-color);
 
-  @include respond-to(md) {
+  @media (min-width: $md) {
     font-size: 80px;
     line-height: 80px;
   }
@@ -115,10 +137,9 @@ body {
   letter-spacing: -0.02em;
   font-family: var(--font-heading);
   color: var(--color-title-color);
-
-  @include respond-to(md) {
+  @media (min-width: $md) {
     font-size: 62px;
-    line-height: 80px;
+    line-height: 62px;
   }
 }
 
@@ -128,8 +149,7 @@ body {
   font-weight: 500;
   font-family: var(--font-heading);
   color: var(--color-title-color);
-
-  @include respond-to(md) {
+  @media (min-width: $md) {
     font-size: 48px;
     line-height: 62px;
   }
@@ -141,8 +161,7 @@ body {
   font-weight: 500;
   font-family: var(--font-heading);
   color: var(--color-title-color);
-
-  @include respond-to(md) {
+  @media (min-width: $md) {
     font-size: 36px;
     line-height: 40px;
   }
@@ -154,8 +173,7 @@ body {
   font-weight: 500;
   font-family: var(--font-heading);
   color: var(--color-title-color);
-
-  @include respond-to(md) {
+  @media (min-width: $md) {
     font-size: 32px;
     line-height: 40px;
   }
@@ -167,8 +185,7 @@ body {
   font-weight: 500;
   letter-spacing: 0.01em;
   font-family: var(--font-heading);
-
-  @include respond-to(md) {
+  @media (min-width: $md) {
     font-size: 24px;
     line-height: 28px;
   }
@@ -180,8 +197,7 @@ body {
   font-weight: 500;
   letter-spacing: 0.02em;
   font-family: var(--font-heading);
-
-  @include respond-to(md) {
+  @media (min-width: $md) {
     font-size: 20px;
     line-height: 28px;
   }
@@ -198,7 +214,7 @@ body {
   font-size: 20px;
   line-height: 30px;
 
-  @include respond-to(md) {
+  @media (min-width: $md) {
     font-size: 24px;
     line-height: 40px;
   }
@@ -208,7 +224,7 @@ body {
   font-size: 18px;
   line-height: 28px;
 
-  @include respond-to(md) {
+  @media (min-width: $md) {
     font-size: 20px;
     line-height: 32px;
   }
@@ -226,7 +242,7 @@ body {
   font-size: 16px;
   line-height: 24px;
 
-  @include respond-to(md) {
+  @media (min-width: $md) {
     font-size: 18px;
     line-height: 24px;
   }
@@ -266,11 +282,11 @@ body {
 .common-space {
   margin-bottom: 1.75rem;
 
-  @include respond-to(md) {
+  @media (min-width: $md) {
     margin-bottom: 2rem;
   }
 
-  @include respond-to(lg) {
+  @media (min-width: $lg) {
     margin-bottom: 2.5rem;
   }
 }
@@ -278,11 +294,11 @@ body {
 .common-space-top {
   margin-top: 1.75rem;
 
-  @include respond-to(md) {
+  @media (min-width: $md) {
     margin-top: 2rem;
   }
 
-  @include respond-to(lg) {
+  @media (min-width: $lg) {
     margin-top: 2.5rem;
   }
 }
@@ -290,11 +306,11 @@ body {
 .common-gap {
   gap: 1.75rem;
 
-  @include respond-to(md) {
+  @media (min-width: $md) {
     gap: 2rem;
   }
 
-  @include respond-to(lg) {
+  @media (min-width: $lg) {
     gap: 2.5rem;
   }
 }
@@ -315,11 +331,11 @@ body {
   font-weight: 500;
   white-space: nowrap;
 
-  @include respond-to(sm) {
+  @media (min-width: $sm) {
     max-width: 290px;
   }
 
-  @include respond-to(md) {
+  @media (min-width: $md) {
     font-size: 1.125rem;
     line-height: 1.5rem;
   }
@@ -443,7 +459,7 @@ body {
       flex: 0 0 80vw;
       margin: 0 20px;
     }
-    @media (min-width: 768px) {
+    @media (min-width: $md) {
       .embla__slide {
         flex: 0 0 50%;
         margin-left: 0;
