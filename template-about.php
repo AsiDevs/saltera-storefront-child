@@ -12,9 +12,13 @@ get_header(); ?>
         include("template-parts/template-common/hero/index.php"); 
     ?>
     <?php 
+        $info = get_field('info'); 
+        include("template-parts/template-common/vision-statement/index.php"); 
+    ?>
+    <?php 
         $title = get_field('iwt_title');
         $description = get_field('iwt_description');
-        $features = get_field('content'); 
+        $content = get_field('content'); 
         include("template-parts/template-common/image-with-text/index.php"); 
     ?>
     <?php 

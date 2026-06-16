@@ -29,6 +29,9 @@
   text-align: left;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  &:focus {
+    outline: none;
+  }
 
   @media (min-width: $md) {
     padding: 24px 20px;
@@ -79,14 +82,14 @@
   overflow: hidden;
   min-height: 0;
   border-top: 1px solid #e5e5e5;
-  padding: 20px 16px;
-
-  @media (min-width: $md) {
-    padding: 24px 20px;
-  }
-
-  @media (min-width: $lg) {
-    padding: 24px 24px;
+  p {
+    padding: 0 16px;
+    @media (min-width: $md) {
+      padding: 0 20px;
+    }
+    @media (min-width: $lg) {
+      padding: 0 24px;
+    }
   }
 }
 
