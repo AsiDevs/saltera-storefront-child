@@ -5,6 +5,7 @@
 
 get_header(); ?>
     <?php   
+        $image = get_field('hero_image');
         $title = get_field('hero_title');
         $description = get_field('hero_description');
         $buttons = get_field('hero_buttons'); 
