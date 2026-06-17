@@ -47,6 +47,14 @@ function saltera_enqueue_scripts() {
 }
 add_action('wp_enqueue_scripts', 'saltera_enqueue_scripts');
 
+// Redirect to checkout when Buy Now button is used
+add_filter( 'woocommerce_add_to_cart_redirect', function ( $url ) {
+    if ( ! empty( $_GET['buy_now'] ) ) {
+        return wc_get_checkout_url();
+    }
+    return $url;
+} );
+
 // ACF Options page for site-wide settings (announcement bar text, etc.)
 if ( function_exists( 'acf_add_options_page' ) ) {
     acf_add_options_page([

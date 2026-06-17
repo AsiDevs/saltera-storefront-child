@@ -27,6 +27,7 @@
 <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/css/common/hero/hero.css">
 <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/css/common/faq/faq.css">
 <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/css/common/features/features.css">
+<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/css/common/product/product.css">
 <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/css/common/image-with-text/image-with-text.css">
 <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/css/common/footer/footer.css">
 <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/css/common/vision-statement/vision-statement.css">
@@ -118,15 +119,7 @@
 
 	</header><!-- #masthead -->
 
-	<?php
-	/**
-	 * Functions hooked in to storefront_before_content
-	 *
-	 * @hooked storefront_header_widget_region - 10
-	 * @hooked woocommerce_breadcrumb - 10
-	 */
-	do_action( 'storefront_before_content' );
-	?>
+
 
 	<div id="content" class="site-content" tabindex="-1">
 		<div class="">

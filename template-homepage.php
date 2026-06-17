@@ -18,6 +18,10 @@ get_header(); ?>
       include("template-parts/template-common/features/index.php"); 
     ?>
     <?php 
+      $product = get_field('product'); 
+      include("template-parts/template-common/product/index.php"); 
+    ?>
+    <?php 
       $title = get_field('iwt_title');
       $description = get_field('iwt_description');
       $content = get_field('content'); 
