@@ -100,6 +100,7 @@
 
 </div><!-- #page -->
 
+<script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/community.js"></script>
 <script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/faq.js"></script>
 <script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/product.js"></script>
 <?php wp_footer(); ?>

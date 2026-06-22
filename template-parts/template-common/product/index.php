@@ -25,7 +25,7 @@ $variations_data = [];
 $any_variation   = null;
 if ( $wc_product->is_type( 'variable' ) && $size_attr_key ) {
 	foreach ( $wc_product->get_available_variations() as $v ) {
-		$slug = $v['attributes'][ 'attribute_' . $size_attr_key ] ?? '';
+		$slug = sanitize_title( $v['attributes'][ 'attribute_' . $size_attr_key ] ?? '' );
 		if ( $slug === '' ) {
 			if ( ! $any_variation ) {
 				$any_variation = [

@@ -31,6 +31,7 @@
 <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/css/common/image-with-text/image-with-text.css">
 <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/css/common/footer/footer.css">
 <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/css/common/vision-statement/vision-statement.css">
+<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/css/common/community/community.css">
 
 <?php wp_head(); ?>
 </head>

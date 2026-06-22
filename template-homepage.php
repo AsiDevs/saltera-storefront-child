@@ -22,6 +22,12 @@ get_header(); ?>
       include("template-parts/template-common/product/index.php"); 
     ?>
     <?php 
+      $title = get_field('community_title');
+      $description = get_field('community_description');
+      $community = get_field('community'); 
+      include("template-parts/template-common/community/index.php"); 
+    ?>
+    <?php 
       $title = get_field('iwt_title');
       $description = get_field('iwt_description');
       $content = get_field('content'); 
