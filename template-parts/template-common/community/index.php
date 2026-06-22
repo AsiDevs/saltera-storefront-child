@@ -9,10 +9,11 @@ if ( empty( $community ) ) return;
 
 	<div class="community__slider-wrapper">
 		<div class="community__slider hide-scrollbar" id="communitySlider">
-			<?php foreach ( $community as $com ) :
+			<?php $reveal_index = 0; foreach ( $community as $com ) :
 				$card_title = $com['text'] ?? '';
 				$card_file  = $com['file'] ?? null;
 				include( get_stylesheet_directory() . '/template-parts/template-common/community/single-card.php' );
+				$reveal_index++;
 			endforeach; ?>
 		</div>
 	</div>

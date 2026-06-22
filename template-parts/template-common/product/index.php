@@ -105,7 +105,7 @@ $empty_stars = 5 - $full_stars;
 ?>
 
 <!-- single-product-section -->
-<div class="single-product section-container full-padding">
+<div class="single-product section-container full-padding reveal">
 
 	<div class="single-product__image">
 		<?php if ( $image_url ) : ?>

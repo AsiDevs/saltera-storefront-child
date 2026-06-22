@@ -1,4 +1,4 @@
-<div class="single-feature">
+<div class="single-feature reveal" style="--reveal-delay: <?php echo esc_attr( min( $reveal_index * 0.1, 0.4 ) ); ?>s">
   <div class="single-feature__icon">
     <img src="<?php echo esc_url($icon); ?>" alt="<?php echo esc_attr($title); ?>">
   </div>

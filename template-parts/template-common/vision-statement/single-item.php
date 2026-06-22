@@ -1,4 +1,4 @@
-<div class="vision-card">
+<div class="vision-card reveal" style="--reveal-delay: <?php echo esc_attr( min( $reveal_index * 0.12, 0.4 ) ); ?>s">
   <?php if ( ! empty( $icon['url'] ) ) : ?>
   <div class="vision-card__watermark" aria-hidden="true">
     <img src="<?php echo esc_url( $icon['url'] ); ?>" alt="">

@@ -18,7 +18,7 @@ $is_video = isset( $card_file['type'] ) && $card_file['type'] === 'video';
 $file_url = $card_file['url'] ?? '';
 ?>
 
-<div class="community__slide">
+<div class="community__slide reveal" style="--reveal-delay: <?php echo esc_attr( min( $reveal_index * 0.1, 0.5 ) ); ?>s">
 	<div class="community__card<?php echo $is_video ? ' is-video' : ''; ?>"
 	     <?php if ( $is_video ) : ?>data-video-url="<?php echo esc_url( $file_url ); ?>"<?php endif; ?>>
 
