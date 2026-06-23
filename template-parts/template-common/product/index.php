@@ -25,7 +25,7 @@ $variations_data = [];
 $any_variation   = null;
 if ( $wc_product->is_type( 'variable' ) && $size_attr_key ) {
 	foreach ( $wc_product->get_available_variations() as $v ) {
-		$slug = sanitize_title( $v['attributes'][ 'attribute_' . $size_attr_key ] ?? '' );
+		$slug = $v['attributes'][ 'attribute_' . $size_attr_key ] ?? '';
 		if ( $slug === '' ) {
 			if ( ! $any_variation ) {
 				$any_variation = [
@@ -105,7 +105,7 @@ $empty_stars = 5 - $full_stars;
 ?>
 
 <!-- single-product-section -->
-<div class="single-product section-container full-padding reveal">
+<div class="single-product section-container full-padding">
 
 	<div class="single-product__image">
 		<?php if ( $image_url ) : ?>

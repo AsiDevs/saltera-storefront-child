@@ -96,3 +96,29 @@
   // Ensure correct variation ID is in button hrefs from page load
   updateUrls();
 })();
+
+// Gallery thumbnail switcher
+(function () {
+  var thumbs  = document.querySelectorAll('.single-product__thumb');
+  var mainImg = document.getElementById('product-main-img');
+  if (!thumbs.length || !mainImg) return;
+
+  thumbs.forEach(function (thumb) {
+    thumb.addEventListener('click', function () {
+      thumbs.forEach(function (t) { t.classList.remove('is-active'); });
+      thumb.classList.add('is-active');
+      mainImg.src = thumb.dataset.img;
+    });
+  });
+})();
+
+// Dropdown accordions
+(function () {
+  document.querySelectorAll('.single-product__dropdown-header').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var item = btn.closest('.single-product__dropdown');
+      var open = item.classList.toggle('is-open');
+      btn.setAttribute('aria-expanded', open);
+    });
+  });
+})();

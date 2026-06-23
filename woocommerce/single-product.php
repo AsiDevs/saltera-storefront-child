@@ -9,7 +9,7 @@ while ( have_posts() ) :
 	the_post();
 
 	$product = get_post();
-	include( get_stylesheet_directory() . '/template-parts/template-common/product/index.php' );
+	include( get_stylesheet_directory() . '/template-parts/template-common/product/single.php' );
 
 	$title       = get_field( 'iwt_title' );
 	$description = get_field( 'iwt_description' );
