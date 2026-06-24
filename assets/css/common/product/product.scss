@@ -1,11 +1,11 @@
 @use "../../../css/global/breakpoints" as *;
 
-.single-product {
+.single-product-section {
   display: flex;
   flex-direction: column;
   gap: 32px;
 
-  @media (min-width: $lg) {
+  @media (min-width: $xl) {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 32px 60px;
@@ -14,7 +14,7 @@
 }
 
 /* ── Gallery ── */
-.single-product__gallery {
+.single-product-section__gallery {
   display: flex;
   flex-direction: column-reverse;
   gap: 12px;
@@ -25,14 +25,14 @@
     align-items: stretch;
   }
 
-  @media (min-width: $lg) {
+  @media (min-width: $xl) {
     flex: 0 0 740px;
     height: 620px;
     align-items: flex-start;
   }
 }
 
-.single-product__thumbs {
+.single-product-section__thumbs {
   display: flex;
   flex-direction: row;
   gap: 8px;
@@ -56,13 +56,13 @@
     scroll-snap-type: y mandatory;
   }
 
-  @media (min-width: $lg) {
+  @media (min-width: $xl) {
     height: 620px;
     width: 108px;
   }
 }
 
-.single-product__thumb {
+.single-product-section__thumb {
   flex-shrink: 0;
   scroll-snap-align: start;
   width: 78px;
@@ -95,10 +95,10 @@
   }
 }
 
-.single-product__main-image {
+.single-product-section__main-image {
   flex: 1;
 
-  @media (min-width: $lg) {
+  @media (min-width: $xl) {
     flex: 0 0 620px;
     max-width: 620px;
   }
@@ -113,7 +113,7 @@
 }
 
 /* ── Info column ── */
-.single-product__info {
+.single-product-section__info {
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -121,30 +121,30 @@
   text-align: center;
   align-items: center;
 
-  @media (min-width: $lg) {
+  @media (min-width: $xl) {
     text-align: left;
     align-items: flex-start;
   }
 }
 
-.single-product__title {
+.single-product-section__title {
   width: 100%;
 }
 
 /* Rating row */
-.single-product__rating {
+.single-product-section__rating {
   display: flex;
   align-items: center;
   gap: 8px;
   flex-wrap: wrap;
   justify-content: center;
 
-  @media (min-width: $lg) {
+  @media (min-width: $xl) {
     justify-content: flex-start;
   }
 }
 
-.single-product__rating-score {
+.single-product-section__rating-score {
   background: #fff;
   border: 1px solid #e0e0e0;
   border-radius: 6px;
@@ -153,18 +153,18 @@
   color: #0d0d0d;
 }
 
-.single-product__stars {
+.single-product-section__stars {
   display: inline-flex;
   align-items: center;
   gap: 2px;
 }
 
-.single-product__rating-count {
+.single-product-section__rating-count {
   color: #2f2f2f;
 }
 
 /* Description */
-.single-product__description {
+.single-product-section__description {
   color: #2f2f2f;
   width: 100%;
 
@@ -174,7 +174,7 @@
 }
 
 /* Divider */
-.single-product__divider {
+.single-product-section__divider {
   border: none;
   border-top: 1px solid #e0e0e0;
   width: 100%;
@@ -182,34 +182,34 @@
 }
 
 /* Size variants */
-.single-product__variants {
+.single-product-section__variants {
   display: flex;
   flex-direction: column;
   gap: 10px;
   width: 100%;
   align-items: center;
 
-  @media (min-width: $lg) {
+  @media (min-width: $xl) {
     align-items: flex-start;
   }
 }
 
-.single-product__variants-label {
+.single-product-section__variants-label {
   color: #0d0d0d;
 }
 
-.single-product__variant-pills {
+.single-product-section__variant-pills {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
   justify-content: center;
 
-  @media (min-width: $lg) {
+  @media (min-width: $xl) {
     justify-content: flex-start;
   }
 }
 
-.single-product__variant-pill {
+.single-product-section__variant-pill {
   border-radius: 50px;
   border: 1.5px solid #0d0d0d;
   padding: 6px 20px;
@@ -246,25 +246,25 @@
 }
 
 /* KOKO payment info */
-.single-product__koko {
+.single-product-section__koko {
   color: #2f2f2f;
   width: 100%;
 }
 
 /* Quantity + Price row */
-.single-product__purchase {
+.single-product-section__purchase {
   display: flex;
   align-items: center;
   gap: 24px;
   flex-wrap: wrap;
   justify-content: center;
 
-  @media (min-width: $lg) {
+  @media (min-width: $xl) {
     justify-content: flex-start;
   }
 }
 
-.single-product__qty {
+.single-product-section__qty {
   display: flex;
   align-items: center;
   gap: 0;
@@ -273,7 +273,7 @@
   overflow: hidden;
 }
 
-.single-product__qty-btn {
+.single-product-section__qty-btn {
   width: 40px;
   height: 40px;
   background: transparent;
@@ -292,7 +292,7 @@
   }
 }
 
-.single-product__qty-value {
+.single-product-section__qty-value {
   min-width: 40px;
   text-align: center;
   border-left: 1.5px solid #e0e0e0;
@@ -305,7 +305,7 @@
 }
 
 /* WooCommerce price */
-.single-product__price {
+.single-product-section__price {
   font-size: 24px;
   font-weight: 700;
   color: #0d0d0d;
@@ -322,7 +322,7 @@
 }
 
 /* Action buttons */
-.single-product__actions {
+.single-product-section__actions {
   display: flex;
   gap: 16px;
   width: 100%;
@@ -340,7 +340,7 @@
 }
 
 /* ── USP trust cards ── */
-.single-product__usps {
+.single-product-section__usps {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 12px;
@@ -353,16 +353,16 @@
   }
 }
 
-.single-product__usps.desktop_below {
-  @media (min-width: $lg) {
+.single-product-section__usps.desktop_below {
+  @media (min-width: $xl) {
     display: none;
   }
 }
 
-.single-product__usps.desktop {
+.single-product-section__usps.desktop {
   display: none;
 
-  @media (min-width: $lg) {
+  @media (min-width: $xl) {
     display: grid;
     flex: 0 0 740px;
     max-width: 740px;
@@ -370,7 +370,7 @@
   }
 }
 
-.single-product__usp {
+.single-product-section__usp {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -381,25 +381,25 @@
   text-align: center;
 }
 
-.single-product__usp-icon {
+.single-product-section__usp-icon {
   width: 32px;
   height: 32px;
   object-fit: contain;
 }
 
 /* ── Dropdown accordions ── */
-.single-product__dropdowns {
+.single-product-section__dropdowns {
   display: flex;
   flex-direction: column;
   width: 100%;
   border-top: 1px solid #e0e0e0;
 }
 
-.single-product__dropdown {
+.single-product-section__dropdown {
   border-bottom: 1px solid #e0e0e0;
 }
 
-.single-product__dropdown-header {
+.single-product-section__dropdown-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -416,7 +416,7 @@
   }
 }
 
-.single-product__dropdown-chevron {
+.single-product-section__dropdown-chevron {
   flex-shrink: 0;
   width: 20px;
   height: 20px;
@@ -426,13 +426,13 @@
   transition: transform 300ms ease;
 }
 
-.single-product__dropdown-body-outer {
+.single-product-section__dropdown-body-outer {
   display: grid;
   grid-template-rows: 0fr;
   transition: grid-template-rows 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-.single-product__dropdown-body {
+.single-product-section__dropdown-body {
   overflow: hidden;
   min-height: 0;
   color: #2f2f2f;
@@ -443,12 +443,12 @@
   }
 }
 
-.single-product__dropdown.is-open {
-  .single-product__dropdown-body-outer {
+.single-product-section__dropdown.is-open {
+  .single-product-section__dropdown-body-outer {
     grid-template-rows: 1fr;
   }
 
-  .single-product__dropdown-chevron {
+  .single-product-section__dropdown-chevron {
     transform: rotate(180deg);
   }
 }

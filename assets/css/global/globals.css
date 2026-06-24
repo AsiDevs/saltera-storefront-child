@@ -15,6 +15,14 @@
   color: #f8f8f8;
 }
 
+.bg-offwhite {
+  background-color: #f8f8f8;
+}
+
+.bg-white {
+  background-color: #ffffff;
+}
+
 @font-face {
   font-family: "HelveticaNeue";
   src: url("../../fonts/HelveticaNeueThin.otf") format("opentype");

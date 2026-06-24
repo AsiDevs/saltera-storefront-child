@@ -1,11 +1,11 @@
 (function () {
-  var actions        = document.querySelector('.single-product__actions');
+  var actions        = document.querySelector('.single-product-section__actions');
   if (!actions) return;
 
   var minusBtn       = document.getElementById('qty-minus');
   var plusBtn        = document.getElementById('qty-plus');
   var qtyEl          = document.getElementById('qty-value');
-  var priceContainer = document.querySelector('.single-product__price');
+  var priceContainer = document.querySelector('.single-product-section__price');
   if (!minusBtn || !plusBtn || !qtyEl) return;
 
   var productId = actions.dataset.productId;
@@ -21,7 +21,7 @@
   var unitPrice = priceContainer ? parseFloat(priceContainer.dataset.unitPrice) : 0;
 
   // Sync selectedVariationId with the initially-active pill
-  var activePill = document.querySelector('.single-product__variant-pill.is-active');
+  var activePill = document.querySelector('.single-product-section__variant-pill.is-active');
   if (activePill && isVariable) {
     var initSlug = activePill.dataset.variant;
     if (variations[initSlug]) {
@@ -57,7 +57,7 @@
   }
 
   // Size pill selection
-  var pills = document.querySelectorAll('.single-product__variant-pill:not([disabled])');
+  var pills = document.querySelectorAll('.single-product-section__variant-pill:not([disabled])');
   pills.forEach(function (pill) {
     pill.addEventListener('click', function () {
       pills.forEach(function (p) { p.classList.remove('is-active'); });
@@ -99,7 +99,7 @@
 
 // Gallery thumbnail switcher
 (function () {
-  var thumbs  = document.querySelectorAll('.single-product__thumb');
+  var thumbs  = document.querySelectorAll('.single-product-section__thumb');
   var mainImg = document.getElementById('product-main-img');
   if (!thumbs.length || !mainImg) return;
 
@@ -114,9 +114,9 @@
 
 // Dropdown accordions
 (function () {
-  document.querySelectorAll('.single-product__dropdown-header').forEach(function (btn) {
+  document.querySelectorAll('.single-product-section__dropdown-header').forEach(function (btn) {
     btn.addEventListener('click', function () {
-      var item = btn.closest('.single-product__dropdown');
+      var item = btn.closest('.single-product-section__dropdown');
       var open = item.classList.toggle('is-open');
       btn.setAttribute('aria-expanded', open);
     });

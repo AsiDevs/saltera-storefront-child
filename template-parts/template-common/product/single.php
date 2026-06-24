@@ -114,21 +114,21 @@ $empty_stars = 5 - $full_stars;
 $first_img_url = ! empty( $gallery_ids ) ? wp_get_attachment_image_url( reset( $gallery_ids ), 'large' ) : '';
 ?>
 
-<!-- single-product-section -->
+<!-- single-product-section-section -->
 <div class="<?php echo $has_bg ? 'bg-offwhite' : 'bg-white'; ?>">
-	<div class="single-product section-container full-padding reveal">
+	<div class="single-product-section section-container full-padding reveal">
 
 		<!-- Gallery -->
 		 <div>
-			 <div class="single-product__gallery">
+			 <div class="single-product-section__gallery">
 				 <?php if ( ! empty( $gallery_ids ) ) : ?>
-				 <div class="single-product__thumbs">
+				 <div class="single-product-section__thumbs">
 					 <?php $is_first_thumb = true; foreach ( $gallery_ids as $img_id ) :
 						 $thumb_url = wp_get_attachment_image_url( $img_id, 'thumbnail' );
 						 $large_url = wp_get_attachment_image_url( $img_id, 'large' );
 						 if ( ! $thumb_url ) continue;
 					 ?>
-					 <button class="single-product__thumb<?php echo $is_first_thumb ? ' is-active' : ''; ?>"
+					 <button class="single-product-section__thumb<?php echo $is_first_thumb ? ' is-active' : ''; ?>"
 							 data-img="<?php echo esc_url( $large_url ); ?>"
 							 aria-label="<?php esc_attr_e( 'View image', 'storefront-child' ); ?>">
 						 <img src="<?php echo esc_url( $thumb_url ); ?>" alt="">
@@ -136,7 +136,7 @@ $first_img_url = ! empty( $gallery_ids ) ? wp_get_attachment_image_url( reset( $
 					 <?php $is_first_thumb = false; endforeach; ?>
 				 </div>
 				 <?php endif; ?>
-				 <div class="single-product__main-image">
+				 <div class="single-product-section__main-image">
 					 <?php if ( $first_img_url ) : ?>
 					 <img id="product-main-img"
 						  src="<?php echo esc_url( $first_img_url ); ?>"
@@ -145,11 +145,11 @@ $first_img_url = ! empty( $gallery_ids ) ? wp_get_attachment_image_url( reset( $
 				 </div>
 			 </div>
 			<?php if ( ! empty( $usps ) ) : ?>
-				<div class="single-product__usps desktop">
+				<div class="single-product-section__usps desktop">
 					<?php foreach ( $usps as $usp ) : ?>
-					<div class="single-product__usp">
+					<div class="single-product-section__usp">
 						<?php if ( ! empty( $usp['icon'] ) ) : ?>
-							<img src="<?php echo esc_url( $usp['icon'] ); ?>" alt="" class="single-product__usp-icon">
+							<img src="<?php echo esc_url( $usp['icon'] ); ?>" alt="" class="single-product-section__usp-icon">
 						<?php endif; ?>
 						<span class="text-body-x-small"><?php echo esc_html( $usp['text'] ); ?></span>
 					</div>
@@ -159,16 +159,16 @@ $first_img_url = ! empty( $gallery_ids ) ? wp_get_attachment_image_url( reset( $
 		 </div>
 
 		<!-- Info -->
-		<div class="single-product__info">
+		<div class="single-product-section__info">
 
-			<h2 class="single-product__title text-title-x-large">
+			<h2 class="single-product-section__title text-title-x-large">
 				<?php echo wp_kses_post( $title ); ?>
 			</h2>
 
 			<?php if ( $avg_rating ) : ?>
-			<div class="single-product__rating">
-				<span class="single-product__rating-score text-body-small medium"><?php echo esc_html( $avg_rating ); ?></span>
-				<span class="single-product__stars" aria-label="<?php echo esc_attr( $avg_rating ); ?> out of 5 stars">
+			<div class="single-product-section__rating">
+				<span class="single-product-section__rating-score text-body-small medium"><?php echo esc_html( $avg_rating ); ?></span>
+				<span class="single-product-section__stars" aria-label="<?php echo esc_attr( $avg_rating ); ?> out of 5 stars">
 					<?php for ( $i = 0; $i < $full_stars; $i++ ) : ?>
 						<svg width="18" height="18" viewBox="0 0 24 24" fill="#E5A716" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
 					<?php endfor; ?>
@@ -177,7 +177,7 @@ $first_img_url = ! empty( $gallery_ids ) ? wp_get_attachment_image_url( reset( $
 					<?php endfor; ?>
 				</span>
 				<?php if ( $review_count ) : ?>
-					<span class="single-product__rating-count text-body-small">
+					<span class="single-product-section__rating-count text-body-small">
 						<?php echo esc_html( number_format( $review_count ) ); ?> <?php esc_html_e( 'ratings', 'storefront-child' ); ?>
 					</span>
 				<?php endif; ?>
@@ -185,19 +185,19 @@ $first_img_url = ! empty( $gallery_ids ) ? wp_get_attachment_image_url( reset( $
 			<?php endif; ?>
 
 			<?php if ( $short_desc ) : ?>
-				<div class="single-product__description text-body-medium text-base">
+				<div class="single-product-section__description text-body-medium text-base">
 					<?php echo wp_kses_post( $short_desc ); ?>
 				</div>
 			<?php endif; ?>
 
-			<hr class="single-product__divider">
+			<hr class="single-product-section__divider">
 
 			<?php if ( ! empty( $size_options ) ) : ?>
-			<div class="single-product__variants">
-				<span class="single-product__variants-label text-body-small medium">
+			<div class="single-product-section__variants">
+				<span class="single-product-section__variants-label text-body-small medium">
 					<?php esc_html_e( 'Size', 'storefront-child' ); ?>
 				</span>
-				<div class="single-product__variant-pills">
+				<div class="single-product-section__variant-pills">
 					<?php
 					$first_active_done = false;
 					foreach ( $size_options as $opt ) :
@@ -210,7 +210,7 @@ $first_img_url = ! empty( $gallery_ids ) ? wp_get_attachment_image_url( reset( $
 							$pill_class = '';
 						}
 					?>
-						<button class="single-product__variant-pill<?php echo $pill_class; ?>"
+						<button class="single-product-section__variant-pill<?php echo $pill_class; ?>"
 						        data-variant="<?php echo esc_attr( $opt['slug'] ); ?>"
 						        <?php echo $opt['disabled'] ? 'disabled' : ''; ?>>
 							<?php echo esc_html( $opt['label'] ); ?>
@@ -221,23 +221,23 @@ $first_img_url = ! empty( $gallery_ids ) ? wp_get_attachment_image_url( reset( $
 			<?php endif; ?>
 
 			<?php if ( $koko_info ) : ?>
-				<p class="single-product__koko text-body-small">
+				<p class="single-product-section__koko text-body-small">
 					<?php echo wp_kses_post( $koko_info ); ?>
 				</p>
 			<?php endif; ?>
 
-			<div class="single-product__purchase">
-				<div class="single-product__qty">
-					<button class="single-product__qty-btn" id="qty-minus" aria-label="<?php esc_attr_e( 'Decrease quantity', 'storefront-child' ); ?>">&#8722;</button>
-					<span class="single-product__qty-value text-body-base medium" id="qty-value">1</span>
-					<button class="single-product__qty-btn" id="qty-plus" aria-label="<?php esc_attr_e( 'Increase quantity', 'storefront-child' ); ?>">+</button>
+			<div class="single-product-section__purchase">
+				<div class="single-product-section__qty">
+					<button class="single-product-section__qty-btn" id="qty-minus" aria-label="<?php esc_attr_e( 'Decrease quantity', 'storefront-child' ); ?>">&#8722;</button>
+					<span class="single-product-section__qty-value text-body-base medium" id="qty-value">1</span>
+					<button class="single-product-section__qty-btn" id="qty-plus" aria-label="<?php esc_attr_e( 'Increase quantity', 'storefront-child' ); ?>">+</button>
 				</div>
-				<div class="single-product__price text-title-large" data-unit-price="<?php echo esc_attr( $initial_unit_price ); ?>">
+				<div class="single-product-section__price text-title-large" data-unit-price="<?php echo esc_attr( $initial_unit_price ); ?>">
 					<?php echo $initial_price_html; ?>
 				</div>
 			</div>
 
-			<div class="single-product__actions"
+			<div class="single-product-section__actions"
 			     data-product-id="<?php echo esc_attr( $product_id ); ?>"
 			     data-base-buy-now="<?php echo esc_url( $buy_now_url ); ?>"
 			     data-base-add-to-cart="<?php echo esc_url( $add_to_cart_url ); ?>"
@@ -260,16 +260,16 @@ $first_img_url = ! empty( $gallery_ids ) ? wp_get_attachment_image_url( reset( $
 
 			<!-- Dropdown accordions -->
 			<?php if ( ! empty( $dropdowns ) ) : ?>
-			<div class="single-product__dropdowns">
+			<div class="single-product-section__dropdowns">
 				<?php $is_first_dropdown = true; foreach ( $dropdowns as $dropdown ) : ?>
-				<div class="single-product__dropdown<?php echo $is_first_dropdown ? ' is-open' : ''; ?>">
-					<button class="single-product__dropdown-header"
+				<div class="single-product-section__dropdown<?php echo $is_first_dropdown ? ' is-open' : ''; ?>">
+					<button class="single-product-section__dropdown-header"
 					        aria-expanded="<?php echo $is_first_dropdown ? 'true' : 'false'; ?>">
 						<span class="text-body-base medium"><?php echo esc_html( $dropdown['title'] ); ?></span>
-						<span class="single-product__dropdown-chevron" aria-hidden="true"></span>
+						<span class="single-product-section__dropdown-chevron" aria-hidden="true"></span>
 					</button>
-					<div class="single-product__dropdown-body-outer">
-						<div class="single-product__dropdown-body text-body-medium">
+					<div class="single-product-section__dropdown-body-outer">
+						<div class="single-product-section__dropdown-body text-body-medium">
 							<?php echo wp_kses_post( $dropdown['description'] ); ?>
 						</div>
 					</div>
@@ -282,11 +282,11 @@ $first_img_url = ! empty( $gallery_ids ) ? wp_get_attachment_image_url( reset( $
 
 		<!-- USP trust cards: mobile/tablet version -->
 		<?php if ( ! empty( $usps ) ) : ?>
-		<div class="single-product__usps desktop_below">
+		<div class="single-product-section__usps desktop_below">
 			<?php foreach ( $usps as $usp ) : ?>
-			<div class="single-product__usp">
+			<div class="single-product-section__usp">
 				<?php if ( ! empty( $usp['icon'] ) ) : ?>
-					<img src="<?php echo esc_url( $usp['icon'] ); ?>" alt="" class="single-product__usp-icon">
+					<img src="<?php echo esc_url( $usp['icon'] ); ?>" alt="" class="single-product-section__usp-icon">
 				<?php endif; ?>
 				<span class="text-body-x-small"><?php echo esc_html( $usp['text'] ); ?></span>
 			</div>
@@ -294,11 +294,11 @@ $first_img_url = ! empty( $gallery_ids ) ? wp_get_attachment_image_url( reset( $
 		</div>
 
 		<!-- USP trust cards: desktop version — 740px, aligned under gallery -->
-		<div class="single-product__usps desktop">
+		<div class="single-product-section__usps desktop_below">
 			<?php foreach ( $usps as $usp ) : ?>
-			<div class="single-product__usp">
+			<div class="single-product-section__usp">
 				<?php if ( ! empty( $usp['icon'] ) ) : ?>
-					<img src="<?php echo esc_url( $usp['icon'] ); ?>" alt="" class="single-product__usp-icon">
+					<img src="<?php echo esc_url( $usp['icon'] ); ?>" alt="" class="single-product-section__usp-icon">
 				<?php endif; ?>
 				<span class="text-body-x-small"><?php echo esc_html( $usp['text'] ); ?></span>
 			</div>
@@ -308,4 +308,4 @@ $first_img_url = ! empty( $gallery_ids ) ? wp_get_attachment_image_url( reset( $
 
 	</div>
 </div>
-<!-- end-of-single-product-section -->
+<!-- end-of-single-product-section-section -->
